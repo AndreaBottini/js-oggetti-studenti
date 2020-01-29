@@ -28,7 +28,7 @@ for (var attributiCheMiInteressano in studente) {
   console.log(studente[attributiCheMiInteressano]);
 }
 
-// Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
+// 2.Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
 
 // Creo un array contenente i dati degli studenti (definiti oggetti) e inserisco le caratteristiche di ognuno (nome, cognome, età). Eseguo il log e ottengo tutti i valori contenuti all'interno dell'array. Successivamente, vado a creare un ciclo for lavorando su tutta la lunghezza dell'array ed eseguo un log della variabile studentiClasse[i](estrapolo tutti i dati) e stampo il nome e il cognome.
 var studentiClasse = [
@@ -59,4 +59,29 @@ var studentiClasse = [
 // console.log(studentiClasse);
 for (var i = 0; i < studentiClasse.length; i++) {
   console.log('I nominativi sono i seguenti: ' + studentiClasse[i].nome + ' ' + studentiClasse[i].cognome);
+}
+
+// Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
+
+// Creo tre prompt impostando tre varibili, che diano la possibilità all'utente di inserire i propri dati. Successivamente, creo una variabile per un nuovo studente (var = studenteNew), nella quale inserisco le varibili create in precedenza. Successivamente, utilizzo la proprietà .push per associare il nuovo studente all'array esistente ed eseguo un log per la stampa.
+
+var nomeNew = prompt('Inserisci il tuo nome');
+var cognomeNew = prompt('Inserisci il tuo cognome');
+var etaNew = parseInt(prompt('Inserisci la tua età'));
+console.log(nomeNew, cognomeNew, etaNew);
+
+var studenteNew = {
+  'nome': nomeNew,
+  'cognome': cognomeNew,
+  'eta': etaNew
+}
+
+studentiClasse.push(studenteNew)
+console.log(studentiClasse);
+
+// Posso creare anche un ciclo for per inserire il nuovo studente all'interno dell'array creato in precedenza. Come effettuato in precedenza, il ciclo for è costruito utilizzando la proprietà .length che mi permette di ciclare tutta la lunghezza dell'array. Creo una variabile dove si verificherà l'uguaglianza tra i dati inseriti dal nuovo utente e gli studenti della classe. Successivamente stampo un log per stampare l'array con il nuovo utente aggiunto.
+
+for (var i = 0; i < studentiClasse.length; i++) {
+  var inserimentoPrompt = studentiClasse[i]
+  console.log(inserimentoPrompt);
 }
