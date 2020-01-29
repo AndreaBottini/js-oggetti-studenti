@@ -27,3 +27,36 @@ var studente = {
 for (var attributiCheMiInteressano in studente) {
   console.log(studente[attributiCheMiInteressano]);
 }
+
+// Creare un array di oggetti di studenti. Ciclare su tutti gli studenti e stampare per ognuno nome e cognome
+
+// Creo un array contenente i dati degli studenti (definiti oggetti) e inserisco le caratteristiche di ognuno (nome, cognome, età). Eseguo il log e ottengo tutti i valori contenuti all'interno dell'array. Successivamente, vado a creare un ciclo for lavorando su tutta la lunghezza dell'array ed eseguo un log della variabile studentiClasse[i](estrapolo tutti i dati) e stampo il nome e il cognome.
+var studentiClasse = [
+  {
+    'nome': 'Andrea',
+    'cognome': 'Bottini',
+    'eta': 36
+  },
+
+  {
+    'nome': 'Alberto',
+    'cognome': 'Bianchi',
+    'eta': 22
+  },
+
+  {
+    'nome': 'Luigi',
+    'cognome': 'Piccoli',
+    'eta': 30
+  },
+
+  {
+    'nome': 'Marco',
+    'cognome': 'Grandi',
+    'eta': 36
+  }
+]
+// console.log(studentiClasse);
+for (var i = 0; i < studentiClasse.length; i++) {
+  console.log('I nominativi sono i seguenti: ' + studentiClasse[i].nome + ' ' + studentiClasse[i].cognome);
+}
